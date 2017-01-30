@@ -6,12 +6,17 @@
 .imageWrapper img{
     width: 200px;
 }
+@media(max-width: 768px){
+    .imageWrapper img{
+        width: 100%;
+    }
+}
 
 .imageWrapper img:hover{
     -webkit-box-shadow: 0px 2px 4px #4d4c4d;
     -moz-box-shadow: 0px 2px 4px #4d4c4d;
     box-shadow: 0px 2px 4px #4d4c4d;
-    cursor: pointer; 
+    cursor: pointer;
 }
 .imgModal{
     display:block;
@@ -37,7 +42,6 @@
 }
 
 .closeModal{
-    top: 1em;
     right: 0;
     position: fixed;
     margin: 1em;

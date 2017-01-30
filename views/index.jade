@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0')
+    meta(name='keywords', content='TAIWAN Cycling')
+    meta(name='description', content='東岸環島單車旅行')
+    meta(name='og:title', content=typeof(title) !== 'undefined' ? title : "東岸環島單車旅行")
+    link(rel='shortcut icon', href='./images/favicon.jpg', type='image/x-icon') 
+    link(rel='stylesheet', href='./styles/index.css')
+    title TW-cycle
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+  body
+    each imageUrl in imageUrlList
+        div.imageWrapper 
+            img(src="#{imageUrl}")
+    script(type='text/javascript', src='./scripts/main.js')

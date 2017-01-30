@@ -1,0 +1,29 @@
+{
+  "name": "tw-bike-trip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "jade": "^1.11.0",
+    "q": "^1.4.1",
+    "aws-sdk": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qclin/TW-BIKE-TRIP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qclin/TW-BIKE-TRIP/issues"
+  },
+  "homepage": "https://github.com/qclin/TW-BIKE-TRIP#readme"
+}

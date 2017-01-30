@@ -1,9 +1,14 @@
+.imageWrapper{
+    display: inline-block;
+    padding: 1em;
+}
+
 .imageWrapper img{
     width: 200px;
 }
 
 .imageWrapper img:hover{
-    border: 1px blue solid; 
+    border: 1px blue solid;
     -webkit-filter: drop-shadow( 0px 2px 4px #000; );
             filter: drop-shadow( 0px 2px 4px #000; );
 }

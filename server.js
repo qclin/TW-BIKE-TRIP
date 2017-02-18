@@ -14,11 +14,14 @@ app.use(express.static(__dirname + "/assets"));
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
-    console.log("00000 ")
     getAllDirectoryFilesS3('/').then((urlList) => {
-        console.log("000001 ", urlList)
         res.render('index.jade', {imageUrlList: urlList});
     });
+});
+
+app.get('/share/:url', function(req, res){
+    var decodeLink = decodeURIComponent(req.params.url);
+    res.render("share.jade", {imageUrl: decodeLink})
 });
 
 

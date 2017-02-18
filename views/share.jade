@@ -15,11 +15,5 @@ html
     title TW-cycle
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
     body
-        each imageUrl in imageUrlList
-            div.imageWrapper 
-                img(src="#{imageUrl}")
-        div.imgModal
-            span.closeModal 關掉
-            a(href="" target="_blank") 信使分享
-
-        script(type='text/javascript', src='./scripts/main.js')
+        div.imagePageWrapper 
+            img(src="#{imageUrl}")

@@ -14,9 +14,7 @@ app.use(express.static(__dirname + "/assets"));
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
-    console.log("00000 ")
     getAllDirectoryFilesS3('/').then((urlList) => {
-        console.log("000001 ", urlList)
         res.render('index.jade', {imageUrlList: urlList});
     });
 });
@@ -31,7 +29,7 @@ function getAllDirectoryFilesS3(projectPath){
 			 params: {Bucket: 'tw-cycle'},
 	}
 	bucketInfo.params.Prefix = projectPath.substring(1)
-	var deferred =Q.defer();
+	var deferred = Q.defer();
 	var bucket = new AWS.S3(bucketInfo);
 	bucket.listObjects(function(err, data){
 		if(err){

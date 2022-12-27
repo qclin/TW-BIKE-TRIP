@@ -8,12 +8,14 @@ html
     meta(name='og:title', content=typeof(title) !== 'undefined' ? title : "東岸環島單車旅行")
     link(rel='shortcut icon', href='./images/favicon.jpg', type='image/x-icon') 
     link(rel='stylesheet', href='./styles/index.css')
-    title TW-cycle
+    title Taiwan bike trip 2016-2017
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script(src='https://cdn.tailwindcss.com')
   body
-    each imageUrl in imageUrlList
-        div.imageWrapper 
-            img(src="#{imageUrl}")
-    div.imgModal
-        span.closeModal 關掉
+    div(class="grid md:grid-cols-3 md:gap-4 m-4 cursor-pointer hover:shadow")
+      each imageUrl in imageUrlList
+        div.imageWrapper
+          img(src="#{imageUrl}", class="grayscale-0 md:grayscale md:hover:grayscale-0 transition ease-in-out delay-150")
+    div#modal(class="fixed block -top-full inset-0 z-10 w-screen h-screen bg-white/80 overflow-scroll flex justify-center items-center")
+        button#close X
     script(type='text/javascript', src='./scripts/main.js')

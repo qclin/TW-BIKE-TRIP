@@ -1,52 +1,21 @@
-.imageWrapper{
-    display: inline-block;
-    padding: 1em;
-}
-
-.imageWrapper img{
-    width: 200px;
-}
-@media(max-width: 768px){
-    .imageWrapper img{
-        width: 100%;
-    }
-}
-
-.imageWrapper img:hover{
-    -webkit-box-shadow: 0px 2px 4px #4d4c4d;
-    -moz-box-shadow: 0px 2px 4px #4d4c4d;
-    box-shadow: 0px 2px 4px #4d4c4d;
-    cursor: pointer;
-}
-.imgModal{
-    display:block;
-    position: fixed;
-    top: -100vh;
+#modal img{
+    width: 100%; 
+    top:0; 
     bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 200;
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(rgba(216,216,216,.3),rgba(216,216,216,1) 100%);
-    background: rgba(255,255, 255, .8);
-    overflow-y: scroll;
-    overflow-x: hidden;
+ 
 }
 
-.imgModal img{
-    width: 100%;
+#close{
+    top:0;
+    right: 0;
     position: absolute;
-    background: white;
-    padding:1em;
-}
-
-.closeModal{
-    right: 0;
-    position: fixed;
     margin: 1em;
-    color: white;
-    border: 2px solid white;
     padding: 5px 10px;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#close:hover{
+    background-color: black;
 }
